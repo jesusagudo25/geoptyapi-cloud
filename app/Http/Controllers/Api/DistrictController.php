@@ -20,6 +20,11 @@ class DistrictController extends Controller
         return District::all(); //Api resource
     }
 
+    public function indexActive()
+    {
+        return District::where('active', 1)->get(); //Api resource
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -57,6 +62,11 @@ class DistrictController extends Controller
     public function showTownships($id)
     {
         return District::findOrFail($id)->townships; //Api resource
+    }
+
+    public function showActiveTownships($id)
+    {
+        return District::findOrFail($id)->townships()->where('active', 1)->get(); //Api resource
     }
 
     /**

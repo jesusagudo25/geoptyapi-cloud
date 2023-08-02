@@ -46,14 +46,18 @@ Route::controller(AuthController::class)->group(function(){
 
 Route::controller(ProvinceController::class)->group(function(){
     Route::get('/provinces','index');
+    Route ::get('/provinces/active','indexActive');
     Route::get('/province/{id}','show');
     Route::get('/province/{id}/districts','showDistricts');
+    Route::get('/province/{id}/districts/active','showDistrictsActive');
 });
 
 Route::controller(DistrictController::class)->group(function(){
     Route::get('/districts','index');
+    Route::get('/districts/active','indexActive');
     Route::get('/district/{id}','show');
     Route::get('/district/{id}/townships','showTownships');
+    Route::get('/district/{id}/townships/active','showTownshipsActive');
 });
 
 Route::controller(TownshipController::class)->group(function(){

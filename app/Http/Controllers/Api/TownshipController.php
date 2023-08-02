@@ -20,6 +20,11 @@ class TownshipController extends Controller
         return Township::all(); //Api resource
     }
 
+    public function indexActive()
+    {
+        return Township::where('active', 1)->get(); //Api resource
+    }
+
     /**
      * Store a newly created resource in storage.
      *

@@ -19,6 +19,11 @@ class ProvinceController extends Controller
         return Province::all(); //Api resource
     }
 
+    public function indexActive()
+    {
+        return Province::where('active', 1)->get(); //Api resource
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -55,6 +60,11 @@ class ProvinceController extends Controller
     public function showDistricts($id)
     {
         return Province::findOrFail($id)->districts; //Api resource
+    }
+
+    public function showDistrictsActive($id)
+    {
+        return Province::findOrFail($id)->districts()->where('active', 1)->get(); //Api resource
     }
 
     /**
