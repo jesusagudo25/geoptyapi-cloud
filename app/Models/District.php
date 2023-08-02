@@ -9,7 +9,7 @@ class District extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id','name','province_id'];
+    protected $fillable = ['id','name','province_id', 'active'];
 
     //Relacion uno a muchos (inversa)
     public function province()

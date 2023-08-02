@@ -74,6 +74,7 @@ class ProvinceController extends Controller
         $province = Province::findOrFail($id);
         $province->id = $request->id;
         $province->name = $request->name;
+        $province->active = $request->active;
         $province->update();
 
         return $province; //Api resource

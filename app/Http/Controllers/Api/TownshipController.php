@@ -67,6 +67,7 @@ class TownshipController extends Controller
         $township->id = $request->id;
         $township->name = $request->name;
         $township->district_id = $request->district_id;
+        $township->active = $request->active;
         $township->update();
 
         return $township; //Api resource

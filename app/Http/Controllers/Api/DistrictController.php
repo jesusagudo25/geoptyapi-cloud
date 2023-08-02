@@ -78,6 +78,7 @@ class DistrictController extends Controller
         $district->id = $request->id;
         $district->name = $request->name;
         $district->province_id = $request->province_id;
+        $district->active = $request->active;
         $district->update();
 
         return $district; //Api resource

@@ -9,7 +9,7 @@ class Township extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id','name','district_id'];
+    protected $fillable = ['id','name','district_id', 'active'];
 
     //Relacion uno a muchos (inversa)
     public function district()
