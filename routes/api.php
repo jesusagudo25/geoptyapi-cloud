@@ -57,7 +57,7 @@ Route::controller(DistrictController::class)->group(function(){
     Route::get('/districts/active','indexActive');
     Route::get('/district/{id}','show');
     Route::get('/district/{id}/townships','showTownships');
-    Route::get('/district/{id}/townships/active','showTownshipsActive');
+    Route::get('/district/{id}/townships/active','showActiveTownships');
 });
 
 Route::controller(TownshipController::class)->group(function(){
